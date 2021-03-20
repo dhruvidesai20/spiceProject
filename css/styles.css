@@ -1,8 +1,16 @@
 body{
-  /* height: 100vh; */
-  /* overflow: hidden; */
   overflow-x: hidden;
   font-family: 'Montserrat', sans-serif;
+}
+
+.fullscreen{
+  height: 100vh;
+  overflow: hidden;
+}
+
+.main-content{
+  transform: translate(0);
+  transition: transform 560ms ease-out;
 }
 
 h1{
@@ -10,16 +18,22 @@ h1{
   font-size: 4.5rem;
 }
 
+.fullscreen section{
+  height: 100vh;
+}
+
 .sec1{
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
 .sec2{
   position: relative;
-  height: 100vh;
+  height: 100%;
   text-align: center;
   padding: 10% 7%;
+  background: antiquewhite;
 }
 
 .sec2 img{
@@ -56,9 +70,8 @@ h1{
 }
 
 .navbar{
-  position: sticky;
   background-color: #ffff;
-  padding: 3% 8%;
+  padding: 2% 8%;
 }
 
 .navbar-brand{
@@ -129,7 +142,7 @@ h1{
 
 .carousel-item  img{
   width: 50%;
-  margin-top: 0.1%;
+  margin-top: 5%;
   z-index: -1;
 }
 
@@ -178,7 +191,7 @@ h1{
 @media (max-width: 1240px) {
   .carousel-item  img{
     width: 55%;
-    margin-top: 8%;
+    margin-top: 10%;
   }
   h1{
     font-size: 3rem;
@@ -196,11 +209,12 @@ h1{
     width: 100%;
     text-align: center;
     position: relative;
-    margin-top: 10%;
     left: 0;
+    top: 10%;
   }
   .navbar{
-    padding: 0 8%;
+    padding: 2% 8%;
+    position: sticky;
   }
   .navbar-nav{
     text-align: center;
